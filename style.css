@@ -224,35 +224,7 @@ footer p{
 margin:8px 0;
 color:#d1d5db;
 }
-<section id="stats">
 
-<h2>My Statistics</h2>
-
-<div class="stats-container">
-
-<div class="stat-box">
-<h1>15+</h1>
-<p>Excel Projects</p>
-</div>
-
-<div class="stat-box">
-<h1>30+</h1>
-<p>Datasets Analyzed</p>
-</div>
-
-<div class="stat-box">
-<h1>2+</h1>
-<p>Programming Languages</p>
-</div>
-
-<div class="stat-box">
-<h1>100%</h1>
-<p>Passion for Learning</p>
-</div>
-
-</div>
-
-</section>
 .buttons{
 display:flex;
 gap:15px;
