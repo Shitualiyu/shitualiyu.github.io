@@ -241,3 +241,10 @@ color:#d1d5db;
 </div>
 
 </section>
+.buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:20px;
+}
