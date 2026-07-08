@@ -5,34 +5,35 @@ const words = [
   "Future Data Scientist"
 ];
 
+const typing = document.getElementById("typing");
+
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typing = document.getElementById("typing");
-
 function typeEffect() {
+
   if (!typing) return;
 
-  const current = words[wordIndex];
+  const currentWord = words[wordIndex];
 
   if (!deleting) {
-    typing.textContent = current.substring(0, charIndex++);
+    typing.textContent = currentWord.substring(0, charIndex++);
   } else {
-    typing.textContent = current.substring(0, charIndex--);
+    typing.textContent = currentWord.substring(0, charIndex--);
   }
 
   let speed = deleting ? 70 : 120;
 
-  if (!deleting && charIndex > current.length) {
+  if (!deleting && charIndex > currentWord.length) {
     deleting = true;
     speed = 1500;
   }
 
   if (deleting && charIndex < 0) {
     deleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
     charIndex = 0;
+    wordIndex = (wordIndex + 1) % words.length;
   }
 
   setTimeout(typeEffect, speed);
@@ -43,7 +44,9 @@ typeEffect();
 const themeBtn = document.getElementById("theme-btn");
 
 if (themeBtn) {
+
   themeBtn.addEventListener("click", () => {
+
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
@@ -51,13 +54,23 @@ if (themeBtn) {
     } else {
       themeBtn.textContent = "🌙";
     }
+
   });
+
 }
 
-const links = document.querySelectorAll('.nav-links a');
+const form = document.querySelector("form");
 
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('active');
+if (form) {
+
+  form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("Thank you! Your message has been received.");
+
+    form.reset();
+
   });
-});
+
+}
