@@ -309,3 +309,16 @@ form .btn{
 border:none;
 cursor:pointer;
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
